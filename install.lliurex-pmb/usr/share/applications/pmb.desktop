@@ -1,0 +1,20 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=PMB
+GenericName=PMB
+Name[es]=PMB
+Name[ca]=PMB
+Name[ca_ES@valencia]=PMB
+Name[ca_ES.UT-8@valencia]=PMB
+Comment=PMB is a completely free SIGB (Integrated Library Management System)
+Comment[es]=PMB es un SIGB (Sistema Integrado de Gestión de Bibliotecas) completamente libre
+Comment[ca]=PMB és un SIGB (Sistema Integrat de Gestió de Biblioteques) completament lliure
+Comment[ca_ES@valencia]=PMB és un SIGB (Sistema Integrat de Gestió de Biblioteques) completament lliure
+Comment[ca_ES.UTF-8@valencia]=PMB és un SIGB (Sistema Integrat de Gestió de Biblioteques) completament lliure
+Exec=xdg-open http://pmb
+Icon=pmb
+Terminal=false
+Type=Application
+Categories=GNOME;Application;Office;
+

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<component type="desktop-application">
+<id>opac</id>
+<metadata_license>CC0-1.0</metadata_license>
+<name>OPAC</name>
+<name xml:lang="es">OPAC</name>
+<name xml:lang="ca_ES@valencia">OPAC</name>
+<name xml:lang="ca_ES.UTF-8@valencia">OPAC</name>
+<name xml:lang="ca">OPAC</name>
+<summary>OPAC (PMB Client)</summary>
+<summary xml:lang="es">OPAC es el servicio de búsqueda en plataforma web del PMB que permite a los usuarios de biblioteca recuperar de manera dinámica y eficaz la información almacenada en PMB</summary>
+<summary xml:lang="ca">OPAC es el servei de busca en plataforma web del PMB que permet als usuaris de biblioteca recuperar de manera dinàmica i eficaç la informació emmagatzemada en PMB</summary>
+<summary xml:lang="ca_ES@valencia">OPAC es el servei de busca en plataforma web del PMB que permet als usuaris de biblioteca recuperar de manera dinàmica i eficaç la informació emmagatzemada en PMB</summary>
+<summary xml:lang="ca_ES.UTF-8@valencia">OPAC es el servei de busca en plataforma web del PMB que permet als usuaris de biblioteca recuperar de manera dinàmica i eficaç la informació emmagatzemada en PMB</summary>
+<description>
+<p>OPAC (PMB Client)</p>
+<p xml:lang="es">OPAC es el servicio de búsqueda en plataforma web del PMB que permite a los usuarios de biblioteca recuperar de manera dinámica y eficaz la información almacenada en PMB. Permite realizar la búsqueda simple, avanzada y por descriptores de los ejemplares existentes en la biblioteca así como realizar reservas de préstamos de estos.</p>
+<p xml:lang="ca">OPAC es el servei de busca en plataforma web del PMB que permet als usuaris de biblioteca recuperar de manera dinàmica i eficaç la informació emmagatzemada en PMB. Permet realitzar la busca simple, avançada i per descriptors dels exemplars existents en la biblioteca així com realitzar reserves de préstecs d'estos.</p>
+<p xml:lang="ca_ES@valencia">OPAC es el servei de busca en plataforma web del PMB que permet als usuaris de biblioteca recuperar de manera dinàmica i eficaç la informació emmagatzemada en PMB. Permet realitzar la busca simple, avançada i per descriptors dels exemplars existents en la biblioteca així com realitzar reserves de préstecs d'estos.</p>
+<p xml:lang="ca_ES.UTF-8@valencia">OPAC es el servei de busca en plataforma web del PMB que permet als usuaris de biblioteca recuperar de manera dinàmica i eficaç la informació emmagatzemada en PMB. Permet realitzar la busca simple, avançada i per descriptors dels exemplars existents en la biblioteca així com realitzar reserves de préstecs d'estos.</p>
+</description>
+<categories>
+<category>Application</category>
+<category>Office</category>
+</categories>
+<icon type="stock">opac</icon>
+<provides><binary>xdg-open</binary></provides>
+<keywords>
+<keyword>OPAC</keyword>
+
+</keywords>
+<screenshots>
+<screenshot type="default">
+<caption>Main window.</caption>
+<image height="450" type="source" width="800">https://screenshots.debian.net/</image>
+</screenshot>
+</screenshots>
+<developer_name>Lliurex Team</developer_name>
+</component>

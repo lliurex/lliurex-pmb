@@ -1,0 +1,19 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=OPAC
+Name[es]=OPAC
+Name[ca_ES@valencia]=OPAC
+Name[ca_ES.UTF-8@valencia]=OPAC
+Name[ca]=OPAC
+GenericName=OPAC
+Comment=OPAC (PMB Client)
+Comment[es]=OPAC es el servicio de búsqueda en plataforma web del PMB que permite a los usuarios de biblioteca recuperar de manera dinámica y eficaz la información almacenada en PMB
+Comment[ca]=OPAC es el servici de busca en plataforma web del PMB que permet als usuaris de biblioteca recuperar de manera dinàmica i eficaç la informació emmagatzemada en PMB
+Comment[ca_ES@valencia]=OPAC es el servici de busca en plataforma web del PMB que permet als usuaris de biblioteca recuperar de manera dinàmica i eficaç la informació emmagatzemada en PMB
+Comment[ca_ES.UTF-8@valencia]=OPAC es el servici de busca en plataforma web del PMB que permet als usuaris de biblioteca recuperar de manera dinàmica i eficaç la informació emmagatzemada en PMB
+Exec=xdg-open http:/opac
+Icon=opac
+Terminal=false
+Type=Application
+Categories=Application;Office;

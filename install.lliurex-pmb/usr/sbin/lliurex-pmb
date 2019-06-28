@@ -1,0 +1,94 @@
+#!/bin/bash
+
+usage (){
+	echo "usage:  lliurex-pmb { --install-database } { --hosts } { --backup } { --upgrade } { -h | --help }"
+	echo "Now PMB can be installed and configurated from zero-center option"
+	echo "A database backup is highly RECOMMENDED!"
+}
+
+
+
+if [[ $EUID -ne 0 ]]; then
+   echo "You must be root my friend" 1>&2
+   exit 1
+fi
+
+mysql_root_passwd -i
+if [ $? -ne 0 ] ; then
+        echo "Mysql is not working properly"
+        exit 1
+fi
+
+case $1 in 
+	--install-database)
+		lliurex-sgbd --install lliurex-pmb
+		PATH_SQL="/usr/share/pmb/www/lliurex/"
+		lliurex-sgbd --inject_sql lliurex-pmb $PATH_SQL"cdu.sql"
+		lliurex-sgbd --inject_sql lliurex-pmb $PATH_SQL"categories.sql"
+		lliurex-sgbd --inject_sql lliurex-pmb $PATH_SQL"z3950.sql"
+		lliurex-sgbd --inject_sql lliurex-pmb $PATH_SQL"z_attr.sql"
+		lliurex-sgbd --sql_mode lliurex-pmb
+	;;
+
+	--hosts)
+		ENSITE="/usr/local/sbin/a2ensite-lliurex"
+		${ENSITE} pmb
+		${ENSITE} opac
+
+                # create a redirect config form apache2 to apache2-lliurex for pmb
+		             
+		a2ensite pmb
+                a2ensite opac
+                a2enmod proxy
+		a2enmod proxy_http
+
+		# Increased timeout 
+		a2enconf pmb
+  
+		systemctl restart apache2-lliurex
+                systemctl restart apache2
+		# create file pmb in /var/lib/dnsmasq/config
+		# if [ ! -d /var/lib/dnsmasq/config ]; then
+		# 	mkdir -p /var/lib/dnsmasq/config
+		# fi
+		MAGIC_KEY=$(cat /etc/n4d/key)
+		#INTERNA=$(n4d-vars getvalues INTERNAL_DOMAIN | cut -d"'" -f2)
+		# if [ -z $INTERNA ]; then
+		# 	echo "Error al obtener INTERNAL_DOMAIN"
+		# 	echo "Se deja sin configurar dnsmasq para pmb"
+		# else
+		hostname=$(hostname)
+			#:>/var/lib/dnsmasq/config/pmb
+
+		if [ "$hostname" != "pmb" ]; then
+			#echo "cname=pmb."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
+			n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a pmb
+
+		fi
+		if [[ "$hostname" != "biblioteca" ]] && [[ "$hostname" != "Biblioteca" ]]; then
+			#echo "cname=biblioteca."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
+			n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a biblioteca
+
+		fi
+		if [ "$hostname" != "opac" ]; then
+			#echo "cname=opac."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
+			n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a opac
+		fi
+		systemctl restart dnsmasq
+		#fi		
+	;;
+
+	--upgrade)
+		lliurex-sgbd --upgrade lliurex-pmb
+	;;
+
+	-h|--help|*)
+	usage
+	;;
+
+esac
+
+#DEBHELPER#
+
+exit 0
+

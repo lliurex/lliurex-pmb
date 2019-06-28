@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<component type="desktop-application">
+<id>pmb</id>
+<metadata_license>CC0-1.0</metadata_license>
+<name>PMB</name>
+<name xml:lang="es">PMB</name>
+<name xml:lang="ca_ES@valencia">PMB</name>
+<name xml:lang="ca_ES.UT-8@valencia">PMB</name>
+<summary>PMB is a completely free SIGB (Integrated Library Management System)</summary>
+<summary xml:lang="es">PMB es un SIGB (Sistema Integrado de Gestión de Bibliotecas) completamente libre</summary>
+<summary xml:lang="ca">PMB és un SIGB (Sistema Integrat de Gestió de Biblioteques) completament lliure</summary>
+<summary xml:lang="ca_ES@valencia">PMB és un SIGB (Sistema Integrat de Gestió de Biblioteques) completament lliure</summary>
+<summary xml:lang="ca_ES.UTF-8@valencia">PMB és un SIGB (Sistema Integrat de Gestió de Biblioteques) completament lliure</summary>
+<description>
+<p>PMB is a completely free SIGB (Integrated Library Management System). It is composed of different modules that help the responsible of the library in the control of the collection and in the interaction with its users. It has an interface in which it is very easy to operate and that is very comfortable to use.</p>
+<p xml:lang="es">PMB es un SIGB (Sistema Integrado de Gestión de Bibliotecas) completamente libre. Está compuesto por distintos módulos que ayudan al responsable de la biblioteca en el control de la colección y en la interacción con sus usuarios. Posee una interfaz en la que resulta muy sencillo operar y que es muy cómoda de usar. </p>
+<p xml:lang="ca">PMB és un SIGB (Sistema Integrat de Gestió de Biblioteques) completament lliure. Està compost per distints mòduls que ajuden al responsable de la biblioteca en el control de la col·lecció i en la interacció amb els seus usuaris. Posseïx una interfície en què resulta molt senzill operar i que és molt còmoda d'usar.</p>
+<p xml:lang="ca_ES@valencia">PMB és un SIGB (Sistema Integrat de Gestió de Biblioteques) completament lliure. Està compost per distints mòduls que ajuden al responsable de la biblioteca en el control de la col·lecció i en la interacció amb els seus usuaris. Posseïx una interfície en què resulta molt senzill operar i que és molt còmoda d'usar.</p>
+<p xml:lang="ca_ES.UTF-8@valencia">PMB és un SIGB (Sistema Integrat de Gestió de Biblioteques) completament lliure. Està compost per distints mòduls que ajuden al responsable de la biblioteca en el control de la col·lecció i en la interacció amb els seus usuaris. Posseïx una interfície en què resulta molt senzill operar i que és molt còmoda d'usar    </p>
+</description>
+<categories>
+<category>GNOME</category>
+<category>Application</category>
+<category>Office</category>
+</categories>
+<icon type="stock">pmb</icon>
+<provides><binary>xdg-open</binary></provides>
+<keywords>
+<keyword>PMB</keyword>
+
+</keywords>
+<developer_name>Lliurex Team</developer_name>
+</component>
