@@ -31,22 +31,22 @@ case $1 in
 	;;
 
 	--hosts)
-		ENSITE="/usr/local/sbin/a2ensite-lliurex"
+		ENSITE="/usr/local/sbin/a2ensite"
 		${ENSITE} pmb
 		${ENSITE} opac
 
                 # create a redirect config form apache2 to apache2-lliurex for pmb
 		             
 		a2ensite pmb
-                a2ensite opac
-                a2enmod proxy
+        a2ensite opac
+        a2enmod proxy
 		a2enmod proxy_http
 
 		# Increased timeout 
 		a2enconf pmb
   
-		systemctl restart apache2-lliurex
-                systemctl restart apache2
+		#systemctl restart apache2-lliurex
+        systemctl restart apache2
 		# create file pmb in /var/lib/dnsmasq/config
 		# if [ ! -d /var/lib/dnsmasq/config ]; then
 		# 	mkdir -p /var/lib/dnsmasq/config
