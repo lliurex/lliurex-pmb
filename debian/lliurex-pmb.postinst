@@ -4,7 +4,7 @@
 # pmb configured with lliurex-zero-pmb
 set -e
 pmb_timeout_file="/etc/apache2/conf-available/pmb.conf"
-pmb_ensite="/etc/apache2-lliurex/sites-enabled/pmb.conf"
+pmb_ensite="/etc/apache2/sites-enabled/pmb.conf"
 
 case "$1" in
     configure)
@@ -15,32 +15,6 @@ case "$1" in
 			systemctl restart apache2 || true
 		fi
 	fi		
-
-	if dpkg --compare-versions "$2" lt 0.41; then
-
-		PMB_ORIG="/usr/share/lliurex-pmb/apache2-lliurex/sites-available/pmb.conf"
-		PMB_ETC="/etc/apache2-lliurex/sites-available/pmb.conf"
-
-		OPAC_ORIG="/usr/share/lliurex-pmb/apache2-lliurex/sites-available/opac.conf"
-		OPAC_ETC="/etc/apache2-lliurex/sites-available/opac.conf"
-
-		RC=0
-		
-		diff $PMB_ORIG $PMB_ETC 1>/dev/null || { cp $PMB_ORIG $PMB_ETC; RC=1; }
-		diff $OPAC_ORIG $OPAC_ETC 1>/dev/null || { cp $OPAC_ORIG $OPAC_ETC; RC=1; }
-
-		if [ -e /etc/init.d/apache2-lliurex ]; then
-			
-			if [ $RC -eq 1 ]; then
-				systemctl restart apache2-lliurex || true
-			fi
-	
-		fi
-
-        fi
-
-
-
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
