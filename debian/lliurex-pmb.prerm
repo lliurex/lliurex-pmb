@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# prerm code commented
+# pmb configured with lliurex-zero-pmb
+set -e
+opac_file="/etc/apache2-lliurex/sites-enabled/opac.conf"
+pmb_file="/etc/apache2-lliurex/sites-enabled/pmb.conf"
+pmb_timeout_file="/etc/apache2/conf-enabled/pmb.conf"
+
+DISSITE="/usr/local/sbin/a2dissite-lliurex"
+
+case "$1" in
+    remove|purge|abort-install|disappear)
+	if [ -f $opac_file ]; then
+		${DISSITE} opac || true
+		a2dissite opac || true
+	fi
+
+	if [ -f $pmb_file ]; then
+		${DISSITE} pmb || true
+		a2dissite pmb || true
+		
+	fi
+	
+	if [ -f $pmb_timeout_file ]; then
+		a2disconf pmb || true
+	fi
+ 
+	systemctl restart apache2-lliurex || true
+	systemctl restart apache2 || true
+	;;
+
+esac
+#DEBHELPER#
+exit 0

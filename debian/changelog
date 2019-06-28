@@ -1,0 +1,248 @@
+lliurex-pmb (0.43) xenial; urgency=medium
+
+  * Added pmb.conf to modify Apache timeout
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Mon, 01 Oct 2018 12:24:12 +0200
+
+lliurex-pmb (0.42) xenial; urgency=high
+
+  * Making sure php5-lliurex-compat is up to date before updating
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 26 Jun 2017 11:43:02 +0200
+
+lliurex-pmb (0.41) xenial; urgency=high
+
+  * Adding apache2-lliurex pmb conf to usr/share
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Fri, 23 Jun 2017 14:33:40 +0200
+
+lliurex-pmb (0.40) xenial; urgency=medium
+
+  * Removed deprecated locale
+
+ -- Juanma Navarro Mañez <juanma1980@gmail.com>  Thu, 22 Jun 2017 09:17:19 +0200
+
+lliurex-pmb (0.39) xenial; urgency=medium
+
+  * Fix prerm script
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 26 May 2017 12:35:32 +0200
+
+lliurex-pmb (0.38) xenial; urgency=medium
+
+  * Added metainfo
+
+ -- Juanma Navarro Mañez <juanma1980@gmail.com>  Wed, 10 May 2017 12:38:32 +0200
+
+lliurex-pmb (0.37) xenial; urgency=medium
+
+  * Fix opac desktop
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Thu, 04 May 2017 10:08:11 +0200
+
+lliurex-pmb (0.36) xenial; urgency=medium
+
+  * Fix desktops to lliurex-store
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 21 Apr 2017 11:16:28 +0200
+
+lliurex-pmb (0.35) xenial; urgency=medium
+
+  * Fix desktops file
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Mon, 06 Feb 2017 13:54:00 +0100
+
+lliurex-pmb (0.34) xenial; urgency=medium
+
+  * Solved problem with dnsmasq if nameserver is Biblioteca
+
+ -- David Montalva Furio <montalva_dav@gva.es>  Wed, 05 Oct 2016 14:10:25 +0200
+
+lliurex-pmb (0.33) xenial; urgency=medium
+
+  * Add a call to change sql-mode
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Thu, 26 May 2016 11:55:46 +0200
+
+lliurex-pmb (0.32) xenial; urgency=medium
+
+  * Fix cname for master and independent servers
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 17 May 2016 12:26:51 +0200
+
+lliurex-pmb (0.31) xenial; urgency=medium
+
+  * Enabled compatibiliy with php5-lliurex
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 27 Apr 2016 11:30:07 +0200
+
+lliurex-pmb (0.30) xenial; urgency=medium
+
+  * Fix depends with php5-lliurex
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Thu, 21 Apr 2016 14:40:42 +0200
+
+lliurex-pmb (0.29) xenial; urgency=medium
+
+  * Fix depends with php5-lliurex
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 20 Apr 2016 13:53:48 +0200
+
+lliurex-pmb (0.28) xenial; urgency=medium
+
+  * Fix depends with php5-lliurex
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 19 Apr 2016 13:15:09 +0200
+
+lliurex-pmb (0.27) xenial; urgency=medium
+
+  * Copy trusty code into xenial
+
+ -- M.Angel Juan <m.angel.juan@gmail.com>  Tue, 09 Feb 2016 12:41:53 +0100
+
+lliurex-pmb (0.24) trusty; urgency=high
+
+  * Updated dependences 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 09 Jun 2015 11:21:10 +0200
+
+lliurex-pmb (0.23) trusty; urgency=high
+
+  * Updated to trusty 
+  * Updated configuration files for apache
+  * Updated files
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Fri, 22 May 2015 09:26:55 +0200
+
+lliurex-pmb (0.22) precise; urgency=low
+
+  * Removed UTF-8 charset from pmb virtualhost
+  * Modified postinst for pmb virtualhost 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Mon, 13 Jan 2014 12:37:27 +0100
+
+lliurex-pmb (0.21) precise; urgency=low
+
+  * Changed postint to dh_make format and testing file
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Mon, 23 Dec 2013 09:29:33 +0100
+
+lliurex-pmb (0.20) precise; urgency=high
+
+  * Update OPAC virtualhost on installed PMB
+
+ -- Vicente Balaguer Domenech <vbalaguer.gva@gmail.com>  Fri, 13 Dec 2013 14:05:15 +0100
+
+lliurex-pmb (0.19) precise; urgency=high
+
+  * Removed utf8 charset of OPAC site
+
+ -- Vicente Balaguer Domenech <vbalaguer.gva@gmail.com>  Fri, 13 Dec 2013 13:16:29 +0100
+
+lliurex-pmb (0.18) precise; urgency=low
+
+  * Tested server name before add cname 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Tue, 03 Dec 2013 12:42:50 +0100
+
+lliurex-pmb (0.17) precise; urgency=low
+
+  * Deleted COMMENT for postinst and prerm 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Thu, 28 Nov 2013 12:11:51 +0100
+
+lliurex-pmb (0.16) precise; urgency=low
+
+  * Renamed options and fixed z3950 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Thu, 31 Oct 2013 09:20:32 +0100
+
+lliurex-pmb (0.15) precise; urgency=low
+
+  * avoid use of prerm and postinst
+
+ -- Vicente Balaguer Domenech <vbalaguer.gva@gmail.com>  Wed, 11 Sep 2013 09:32:09 +0200
+
+lliurex-pmb (0.14) precise; urgency=low
+
+  * added prerm and postinst
+
+ -- Vicente Balaguer Domenech <vbalaguer.gva@gmail.com>  Mon, 09 Sep 2013 14:57:57 +0200
+
+lliurex-pmb (0.13) precise; urgency=low
+
+  * Removed postinst and preinst 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Fri, 19 Jul 2013 09:46:29 +0200
+
+lliurex-pmb (0.12) precise; urgency=low
+
+  * Testing n4d in postinstall 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Fri, 14 Jun 2013 09:40:54 +0200
+
+lliurex-pmb (0.11) precise; urgency=low
+
+  * Dummy version 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Tue, 11 Jun 2013 10:04:07 +0200
+
+lliurex-pmb (0.10) precise; urgency=low
+
+  * Fixed cname and warnings 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Tue, 11 Jun 2013 09:58:54 +0200
+
+lliurex-pmb (0.9) precise; urgency=low
+
+  * Adding virtual host for opac and cname file 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Tue, 11 Jun 2013 09:29:41 +0200
+
+lliurex-pmb (0.8) precise; urgency=low
+
+  * Updated pmb virtual host
+
+ -- Vicente Balaguer Domenech <vbalaguer.gva@gmail.com>  Mon, 10 Jun 2013 11:02:12 +0200
+
+lliurex-pmb (0.7) precise; urgency=low
+
+  * Updated architecture to 'any' 
+
+ -- Vicente Balaguer Domenech <vbalaguer.gva@gmail.com>  Fri, 03 May 2013 10:17:19 +0200
+
+lliurex-pmb (0.6) precise; urgency=low
+
+  * Adding lintian overrrides 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Mon, 15 Apr 2013 08:44:33 +0200
+
+lliurex-pmb (0.5) precise; urgency=low
+
+  * Modified postinst and prerm 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Tue, 09 Apr 2013 12:27:35 +0200
+
+lliurex-pmb (0.4) precise; urgency=low
+
+  * Modified to use lliurex-sgbd
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Tue, 02 Apr 2013 09:27:57 +0200
+
+lliurex-pmb (0.3) precise; urgency=low
+
+  * Moved desktops from pmb 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Wed, 27 Mar 2013 09:36:16 +0100
+
+lliurex-pmb (0.2) precise; urgency=low
+
+  * Fixed postinst and prerm files 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Mon, 25 Mar 2013 12:48:15 +0100
+
+lliurex-pmb (0.1) precise; urgency=low
+
+  * Initial release. 
+
+ -- Jaime Munyoz Fayos <munyoz_jaifay@gva.es>  Tue, 05 Mar 2013 14:34:33 +0100
