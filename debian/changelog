@@ -1,3 +1,9 @@
+lliurex-pmb (0.53) bionic; urgency=medium
+
+  * Initial release for bionic
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 05 Jul 2019 12:12:54 +0200
+
 lliurex-pmb (0.43) xenial; urgency=medium
 
   * Added pmb.conf to modify Apache timeout
