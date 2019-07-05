@@ -31,7 +31,7 @@ case $1 in
 	;;
 
 	--hosts)
-		ENSITE="/usr/local/sbin/a2ensite"
+		ENSITE="a2ensite"
 		${ENSITE} pmb
 		${ENSITE} opac
 
