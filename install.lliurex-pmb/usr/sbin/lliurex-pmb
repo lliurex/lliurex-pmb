@@ -31,11 +31,8 @@ case $1 in
 	;;
 
 	--hosts)
-		ENSITE="a2ensite"
-		${ENSITE} pmb
-		${ENSITE} opac
-
-                # create a redirect config form apache2 to apache2-lliurex for pmb
+	    
+	    # create a redirect config form apache2 to apache2-lliurex for pmb
 		             
 		a2ensite pmb
         a2ensite opac
