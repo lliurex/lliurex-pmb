@@ -1,3 +1,9 @@
+lliurex-pmb (0.54) bionic; urgency=medium
+
+  * Changed to use docker
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Thu, 11 Jul 2019 13:49:47 +0200
+
 lliurex-pmb (0.53) bionic; urgency=medium
 
   * Initial release for bionic
