@@ -1,3 +1,9 @@
+lliurex-pmb (0.55) bionic; urgency=medium
+
+  * Fixed template file
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 12 Jul 2019 09:41:14 +0200
+
 lliurex-pmb (0.54) bionic; urgency=medium
 
   * Changed to use docker
