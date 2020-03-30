@@ -1,3 +1,9 @@
+lliurex-pmb (0.56) bionic; urgency=medium
+
+  * Add virtualhosts for internal domains
+
+ -- Juanma1980 <juanma1980@gmail.com>  Mon, 30 Mar 2020 10:44:10 +0200
+
 lliurex-pmb (0.55) bionic; urgency=medium
 
   * Fixed template file
