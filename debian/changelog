@@ -1,3 +1,9 @@
+lliurex-pmb (0.57) bionic; urgency=medium
+
+  * Add server alias for lliurex domain
+
+ -- Juanma1980 <juanma1980@gmail.com>  Mon, 06 Apr 2020 09:07:54 +0200
+
 lliurex-pmb (0.56) bionic; urgency=medium
 
   * Add virtualhosts for internal domains
