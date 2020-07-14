@@ -1,0 +1,18 @@
+{
+    "linkid":"opac",
+    "link":"http://opac",
+    "icon":"opac.svg",
+    "name": {
+        "default":"library",
+        "valencia":"biblioteca",
+        "es":"biblioteca"
+    },
+    "description": {
+        "default":"Consult the library catalog",
+        "valencia":"Consulta el catàleg de la biblioteca",
+        "es":"Consulta el catálogo de la biblioteca"   
+     },
+     "order":290,
+     "editable":false,
+     "visibility":true
+}
