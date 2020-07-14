@@ -1,3 +1,9 @@
+lliurex-pmb (0.58) bionic; urgency=medium
+
+  * Added opac site in server home page
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 14 Jul 2020 13:57:55 +0200
+
 lliurex-pmb (0.57) bionic; urgency=medium
 
   * Add server alias for lliurex domain
