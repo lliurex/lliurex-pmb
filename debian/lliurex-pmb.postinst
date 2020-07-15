@@ -14,7 +14,8 @@ case "$1" in
 			a2enconf pmb || true
 			systemctl restart apache2 || true
 		fi
-	fi		
+	fi
+	chown www-data:www-data /var/lib/lliurex-www/links/opac.json || true		
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

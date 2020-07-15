@@ -1,3 +1,9 @@
+lliurex-pmb (0.58.1) bionic; urgency=medium
+
+  * Changed the permissions of the link json file to www-data
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 15 Jul 2020 12:23:22 +0200
+
 lliurex-pmb (0.58) bionic; urgency=medium
 
   * Added opac site in server home page
