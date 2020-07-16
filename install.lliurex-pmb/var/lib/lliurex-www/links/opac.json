@@ -3,9 +3,9 @@
     "link":"http://opac",
     "icon":"opac.svg",
     "name": {
-        "default":"library",
-        "valencia":"biblioteca",
-        "es":"biblioteca"
+        "default":"Library",
+        "valencia":"Biblioteca",
+        "es":"Biblioteca"
     },
     "description": {
         "default":"Consult the library catalog",
