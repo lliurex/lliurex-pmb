@@ -48,31 +48,49 @@ case $1 in
 		# if [ ! -d /var/lib/dnsmasq/config ]; then
 		# 	mkdir -p /var/lib/dnsmasq/config
 		# fi
-		MAGIC_KEY=$(cat /etc/n4d/key)
-		#INTERNA=$(n4d-vars getvalues INTERNAL_DOMAIN | cut -d"'" -f2)
-		# if [ -z $INTERNA ]; then
-		# 	echo "Error al obtener INTERNAL_DOMAIN"
-		# 	echo "Se deja sin configurar dnsmasq para pmb"
-		# else
-		hostname=$(hostname)
-			#:>/var/lib/dnsmasq/config/pmb
+		VERSION=$(lliurex-version)
 
-		if [ "$hostname" != "pmb" ]; then
-			#echo "cname=pmb."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
-			n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a pmb
+		if [[ $VERSION == *server* ]];then
+		
+			MAGIC_KEY=$(cat /etc/n4d/key)
+			#INTERNA=$(n4d-vars getvalues INTERNAL_DOMAIN | cut -d"'" -f2)
+			# if [ -z $INTERNA ]; then
+			# 	echo "Error al obtener INTERNAL_DOMAIN"
+			# 	echo "Se deja sin configurar dnsmasq para pmb"
+			# else
+			hostname=$(hostname)
+				#:>/var/lib/dnsmasq/config/pmb
 
-		fi
-		if [[ "$hostname" != "biblioteca" ]] && [[ "$hostname" != "Biblioteca" ]]; then
-			#echo "cname=biblioteca."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
-			n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a biblioteca
+			if [ "$hostname" != "pmb" ]; then
+				#echo "cname=pmb."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
+				n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a pmb
 
-		fi
-		if [ "$hostname" != "opac" ]; then
-			#echo "cname=opac."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
-			n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a opac
-		fi
-		systemctl restart dnsmasq
-		#fi		
+			fi
+			if [[ "$hostname" != "biblioteca" ]] && [[ "$hostname" != "Biblioteca" ]]; then
+				#echo "cname=biblioteca."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
+				n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a biblioteca
+
+			fi
+			if [ "$hostname" != "opac" ]; then
+				#echo "cname=opac."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
+				n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a opac
+			fi
+			systemctl restart dnsmasq
+			#fi		
+		else
+			if [[ $VERSION == *desktop* ]];then
+				
+				#Added pmb and opac in hosts file
+				if ! grep -q "opac" "/etc/hosts" ; then
+					echo "" >> /etc/hosts
+					echo "# Added hosts to pmb and opac" >> /etc/hosts 	
+					echo "127.0.1.1	pmb" >> /etc/hosts
+					echo "127.0.1.1	opac" >> /etc/hosts
+				fi
+			fi
+
+		fi		
+
 	;;
 
 	--upgrade)
