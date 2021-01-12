@@ -1,3 +1,9 @@
+lliurex-pmb (0.58.3) bionic; urgency=medium
+
+  * Added actions to configure PMB in desktop flavour
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 12 Jan 2021 18:05:02 +0100
+
 lliurex-pmb (0.58.2) bionic; urgency=medium
 
   * Fixed name in link json file
