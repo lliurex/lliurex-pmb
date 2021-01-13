@@ -1,3 +1,9 @@
+lliurex-pmb (0.58.4) bionic; urgency=medium
+
+  * Changed instruccions to set hosts in desktop flavour
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 13 Jan 2021 10:50:05 +0100
+
 lliurex-pmb (0.58.3) bionic; urgency=medium
 
   * Added actions to configure PMB in desktop flavour
