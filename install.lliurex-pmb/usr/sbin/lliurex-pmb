@@ -82,10 +82,11 @@ case $1 in
 				
 				#Added pmb and opac in hosts file
 				if ! grep -q "opac" "/etc/hosts" ; then
-					echo "" >> /etc/hosts
-					echo "# Added hosts to pmb and opac" >> /etc/hosts 	
-					echo "127.0.1.1	pmb" >> /etc/hosts
-					echo "127.0.1.1	opac" >> /etc/hosts
+					host_pmb="127.0.0.1	pmb\n"
+					host_opac="127.0.0.1	opac\n"
+					sed -i '/localhost/,/^$/s/^$/'"$host_pmb"'/' /etc/hosts
+					sed -i '/localhost/,/^$/s/^$/'"$host_opac"'/' /etc/hosts
+
 				fi
 			fi
 
