@@ -1,3 +1,9 @@
+lliurex-pmb (0.68.4) focal; urgency=medium
+
+  * Initial release for focal
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 30 Mar 2021 09:12:26 +0200
+
 lliurex-pmb (0.58.4) bionic; urgency=medium
 
   * Changed instruccions to set hosts in desktop flavour
