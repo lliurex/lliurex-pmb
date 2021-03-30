@@ -27,7 +27,7 @@ case $1 in
 		lliurex-sgbd --inject_sql lliurex-pmb $PATH_SQL"categories.sql"
 		lliurex-sgbd --inject_sql lliurex-pmb $PATH_SQL"z3950.sql"
 		lliurex-sgbd --inject_sql lliurex-pmb $PATH_SQL"z_attr.sql"
-		lliurex-sgbd --sql_mode lliurex-pmb
+		#lliurex-sgbd --sql_mode lliurex-pmb
 	;;
 
 	--hosts)
@@ -36,8 +36,8 @@ case $1 in
 		             
 		a2ensite pmb
         a2ensite opac
-        a2enmod proxy
-		a2enmod proxy_http
+        #a2enmod proxy
+		#a2enmod proxy_http
 
 		# Increased timeout 
 		a2enconf pmb
@@ -63,17 +63,21 @@ case $1 in
 
 			if [ "$hostname" != "pmb" ]; then
 				#echo "cname=pmb."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
-				n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a pmb
+				#n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a pmb
+				n4d-client -a https://localhost:9779 -k $MAGIC_KEY call DnsmasqManager.set_internal_dns_entry "['pmb']" || true
 
 			fi
 			if [[ "$hostname" != "biblioteca" ]] && [[ "$hostname" != "Biblioteca" ]]; then
 				#echo "cname=biblioteca."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
-				n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a biblioteca
+				#n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a biblioteca
+				n4d-client -a https://localhost:9779 -k $MAGIC_KEY call DnsmasqManager.set_internal_dns_entry "['Biblioteca']" || true
 
 			fi
 			if [ "$hostname" != "opac" ]; then
 				#echo "cname=opac."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
-				n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a opac
+				#n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a opac
+				n4d-client -a https://localhost:9779 -k $MAGIC_KEY call DnsmasqManager.set_internal_dns_entry "['opac']" || true
+
 			fi
 			systemctl restart dnsmasq
 			#fi		
