@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# postinstall code commented
+# pmb configured with lliurex-zero-pmb
+set -e
+pmb_timeout_file="/etc/apache2/conf-available/pmb.conf"
+pmb_ensite="/etc/apache2/sites-enabled/pmb.conf"
+
+case "$1" in
+    configure)
+    
+	if [ -f $pmb_ensite ];then
+		if [ -f $pmb_timeout_file ];then
+			a2enconf pmb || true
+			systemctl restart apache2 || true
+		fi
+	fi
+	chown www-data:www-data /var/lib/lliurex-www/links/opac.json || true		
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0
+
+
