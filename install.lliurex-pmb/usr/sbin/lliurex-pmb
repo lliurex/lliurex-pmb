@@ -70,7 +70,7 @@ case $1 in
 			if [[ "$hostname" != "biblioteca" ]] && [[ "$hostname" != "Biblioteca" ]]; then
 				#echo "cname=biblioteca."$INTERNA","$hostname"."$INTERNA >> /var/lib/dnsmasq/config/pmb
 				#n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a biblioteca
-				n4d-client -a https://localhost:9779 -k $MAGIC_KEY call DnsmasqManager.set_internal_dns_entry "['Biblioteca']" || true
+				n4d-client -a https://localhost:9779 -k $MAGIC_KEY call DnsmasqManager.set_internal_dns_entry "['biblioteca']" || true
 
 			fi
 			if [ "$hostname" != "opac" ]; then
