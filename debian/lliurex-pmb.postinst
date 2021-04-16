@@ -9,7 +9,7 @@ pmb_ensite="/etc/apache2/sites-enabled/pmb.conf"
 case "$1" in
     configure)
     
-	if dpkg --compare-versions "$2" lt 0.58.4.2 then
+	if dpkg --compare-versions "$2" lt 0.58.4.3; then
 		idcontainer=$(docker ps -a -f "name=pmb" -q 2>/dev/null)
 		if [ "x$idcontainer" != "x" ]; then
 			docker stop pmb	

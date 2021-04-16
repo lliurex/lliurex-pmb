@@ -1,3 +1,9 @@
+lliurex-pmb (0.58.4.3) bionic; urgency=medium
+
+  * Fix typo
+
+ -- Raul Rodrigo Segura <raurodse@gmail.com>  Fri, 16 Apr 2021 11:30:31 +0200
+
 lliurex-pmb (0.58.4.2) bionic; urgency=medium
 
   * Fix typo
