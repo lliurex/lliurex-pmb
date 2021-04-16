@@ -1,3 +1,9 @@
+lliurex-pmb (0.58.4.1) bionic; urgency=medium
+
+  * Fix resolv.conf with macrolan dns
+
+ -- Raul Rodrigo Segura <raurodse@gmail.com>  Fri, 16 Apr 2021 10:26:58 +0200
+
 lliurex-pmb (0.58.4) bionic; urgency=medium
 
   * Changed instruccions to set hosts in desktop flavour

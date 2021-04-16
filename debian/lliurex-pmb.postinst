@@ -9,6 +9,15 @@ pmb_ensite="/etc/apache2/sites-enabled/pmb.conf"
 case "$1" in
     configure)
     
+	if dpkg --compare-versions "$2" lt 0.58.4.1; then
+		idcontainer=$(docker ps -a -f "name=pmb" -q 2>/dev/null)
+		if [ "x$idcontainer" != "x" ]; then
+			docker stop pmb	
+			docker rm -f pmb
+			docker run -d --restart always --name pmb -v /usr/share/lliurex-pmb/resolv.conf:/etc/resolv.conf:r -v /usr/share/pmb/www:/var/www/html -v /var/lib/pmb:/var/lib/pmb   -v /etc/pmb:/etc/pmb -v /var/run/mysqld:/var/run/mysqld -p 800:80 lliurex/pmb_base
+		fi
+	fi
+
 	if [ -f $pmb_ensite ];then
 		if [ -f $pmb_timeout_file ];then
 			a2enconf pmb || true
