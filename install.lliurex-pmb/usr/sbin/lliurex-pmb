@@ -85,11 +85,13 @@ case $1 in
 			if [[ $VERSION == *desktop* ]];then
 				
 				#Added pmb and opac in hosts file
-				if ! grep -q "opac" "/etc/hosts" ; then
+				if ! grep -q "pmb" "/etc/hosts" ; then
 					host_pmb="127.0.0.1	pmb\n"
-					host_opac="127.0.0.1	opac\n"
-					sed -i '/localhost/,/^$/s/^$/'"$host_pmb"'/' /etc/hosts
-					sed -i '/localhost/,/^$/s/^$/'"$host_opac"'/' /etc/hosts
+					sed -i '/127.0.0.1/a '"$host_pmb"'' /etc/hosts
+				fi
+				if ! grep -q "opac" "/etc/hosts" ; then
+					host_opac="127.0.0.1	 opac\n"
+					sed -i '/pmb/a '"$host_opac"'' /etc/hosts
 
 				fi
 			fi
