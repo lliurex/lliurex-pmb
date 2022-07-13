@@ -1,3 +1,9 @@
+lliurex-pmb (0.68.7) focal-updates; urgency=medium
+
+  * Configured some apache2 params in pmb.conf file
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 13 Jul 2022 13:20:23 +0200
+
 lliurex-pmb (0.68.6) focal; urgency=medium
 
   * Fixed command to add pmb and opac in hosts file in desktops installation
